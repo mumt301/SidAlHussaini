@@ -1,0 +1,43 @@
+MUMT301-2021 Assignment 1
+QUESTIONNAIRE!
+
+The following questionnaire seeks to understand your previous knowledge about some of the concepts that we will learn in class during the coming term.
+
+1. Do you know any programming languages? If you do, which ones?
+I only know Max/MSP, the visual programming language. I used it in MUMT 302.
+
+2. What is your primary computer operating system (OS)?
+My primary computer operating system is the MacOS.
+
+3. Do you own a smartphone, tablet, or mobile device? What is your favourite OS for mobile devices?
+I own a smartphone, and my favourite OS for mobile devices is the iOS.
+
+4. Do you use any social networking services? If you do, which ones? Why?
+I use mainly use Instagram and other communicating social networking services (Telegram, Whatsapp). I also have but do not use other social networking services like Facebook, Snapchat, and LinkedIn.
+
+5. Expand the following acronyms and do research about their meaning. You may look them up if you don't know:
+
+    HTTP - 'Hypertext Transfer Protocol' - This is a protocol that transmits hypermedia documents. It is a communication method between web servers and web browsers.
+    REST - 'Representational state transfer' - This is a software that guided the design and development of the World Wide Web.    
+    API - 'Application Programming Interface' - This is a software intermediary that allows two programs to talk to each other.
+
+6. Do you play a musical instrument or sing? If so, how much experience do you have?
+I play the drums, piano, guitar, bass, and I sing. I have been playing these instruments since I was 7.
+
+7. Can you read music notation? If so, how well?
+I can read music notation. I can read it quite well.
+
+8. How large is your personal music collection? Estimate the number of artists, albums, and songs. If instead you listen to music using streaming services, how many playlists, artists, albums, and songs do you have in your account?
+On my phone, I have 38.19GB of downloaded music from Apple Music. 
+
+9. How do you search and find new music?
+I usually look at related artists.
+
+11. Are you aware of any ways in which artists are dealing with public performances post-COVID? Do you think live performances are essential to your musical experience?
+COVID has most definitely changed the way we perform music. I do believe that live performances are essential to a person's musical experience.
+
+12. Name two musical artists that you like. What do you find interesting about their music that makes you like them?
+I like Queen and the Arctic Monkeys. I find that Queen was revolutionary in their crossing and blending of genres. I find that the Arctic Monkeys' lyricism is extremely resonant and relatable. 
+
+line
+line again
