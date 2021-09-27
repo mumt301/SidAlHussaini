@@ -1,3 +1,4 @@
 h1 {color:white; font-size:24px;}
 head {background-color: lightcoral;}
-img {height: 50%; width: 50%}
+img {opacity: 0.5;}
+body {background-image: url("scimg.jpeg");}
