@@ -40,12 +40,12 @@ div.classmenu a:hover {background-color: #777;}
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.75;
+    opacity: 0.5;
 }
 body {
     position: relative;
     color: black;  
-    font-size: 14rem;
-    line-height: 0.9;
-    text-align: center;
+    font-size: 18px;
+    line-height: normal;
+    text-align: start;
 }
