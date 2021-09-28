@@ -1,4 +1,5 @@
 h1 {color:white; font-size:24px;}
 head {background-color: lightcoral;}
 img {opacity: 0.5; align-items: center;}
-body {background-image: url("scimg.jpeg"); opacity: 0.5;}
+body {background-image: url("scimg.jpeg");}
+background-image {opacity: 0.5;}
