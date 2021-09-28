@@ -11,6 +11,9 @@ h2 {
     color: white; 
     font-size: 18px;
 }
+
+img {border-radius: 8px; height: 50%; width: 50%;}
+
 div.assignments {background-color: rgba(100, 148, 237, 0.699); font-size: 28px; text-align: center;}
 div.assignments a {display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none;}
 div.assignments a:hover {background-color: #444;}
