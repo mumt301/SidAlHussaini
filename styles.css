@@ -12,13 +12,13 @@ h2 {
     font-size: 18px;
 }
 div.assignments {background-color: #333; font-size: 28px; text-align: center;}
-div.assignments a {display: inline-block; color: white; text-align: center; padding: 14px;}
+div.assignments a {display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none;}
 div.assignments a:hover {background-color: #777;}
 
 div.classmatesmenu {background-color: #333; text-align: center;}
-div.classmatesmenu a {display: inline-block; color: white; text-align: center; padding: 14px;}
+div.classmatesmenu a {display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none;}
 div.classmatesmenu a:hover {background-color: #777;}
 
 div.classmenu {background-color: #333; text-align: center;}
-div.classmenu a {display: inline-block; color: white; text-align: center; padding: 14px;}
+div.classmenu a {display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none;}
 div.classmenu a:hover {background-color: #777;}
