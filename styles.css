@@ -1,5 +1,5 @@
 body {
-    background-color: lightcoral;
+    background-color: cornflowerblue;
 }
 h1 {
     color:white; 
@@ -11,14 +11,14 @@ h2 {
     color: white; 
     font-size: 18px;
 }
-div.assignments {background-color: lightslategrey; font-size: 28px; text-align: center;}
+div.assignments {background-color: lightgoldenrodyellow; font-size: 28px; text-align: center;}
 div.assignments a {display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none;}
-div.assignments a:hover {background-color: whitesmoke;}
+div.assignments a:hover {background-color: darkgray;}
 
-div.classmatesmenu {background-color: lightslategrey; text-align: center;}
-div.classmatesmenu a {display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none;}
-div.classmatesmenu a:hover {background-color: whitesmoke;}
+div.apage {background-color: lightgoldenrodyellow; text-align: center;}
+div.apage a {display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none;}
+div.apage a:hover {background-color: darkgray;}
 
-div.classmenu {background-color: lightslategrey; text-align: center;}
+div.classmenu {background-color: lightgoldenrodyellow; text-align: center;}
 div.classmenu a {display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none;}
-div.classmenu a:hover {background-color: whitesmoke;}
+div.classmenu a:hover {background-color: darkgray;}
