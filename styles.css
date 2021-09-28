@@ -27,7 +27,7 @@ body {background-image: url("pic.jpg");}
 body {
     position: relative;
 }
-body {
+body:before {
     content: ' ';
     display: block;
     position: absolute;
