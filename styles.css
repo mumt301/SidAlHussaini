@@ -11,7 +11,7 @@ h2 {
     color: white; 
     font-size: 18px;
 }
-.button:link, .button:visited {
+#button:link, #button:visited {
     background-color: lightcoral;
     color: black;
     border: 2px solid darkred;
@@ -21,7 +21,7 @@ h2 {
     display: inline-block;
   }
   
-.button:hover, .button:active {
+#button:hover, #button:active {
     background-color: darkred;
     color: white;
   }
