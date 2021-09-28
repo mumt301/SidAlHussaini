@@ -24,4 +24,20 @@ div.classmenu a {display: inline-block; color: white; text-align: center; paddin
 div.classmenu a:hover {background-color: #777;}
 
 body {background-image: url("pic.jpg");}
-background-image {opacity: 0.5;}
+body {
+    position: relative;
+}
+body {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-image: url("pic.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
