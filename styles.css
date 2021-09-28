@@ -13,12 +13,12 @@ h2 {
 }
 div.assignments {background-color: cornflowerblue; font-size: 28px; text-align: center;}
 div.assignments a {display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none;}
-div.assignments a:hover {background-color: darkgray;}
+div.assignments a:hover {background-color: #444;}
 
 div.apage {background-color: cornflowerblue; text-align: center;}
 div.apage a {display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none;}
-div.apage a:hover {background-color: darkgray;}
+div.apage a:hover {background-color: #444;}
 
 div.classmenu {background-color: cornflowerblue; text-align: center;}
 div.classmenu a {display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none;}
-div.classmenu a:hover {background-color: darkgray;}
+div.classmenu a:hover {background-color: #444;}
