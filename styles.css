@@ -1,5 +1,27 @@
-body {background-color: lightcoral;}
-h1 {color:white; font-size: 60px; text-align: center; text-shadow:2px 2px lightgrey; }
-h2 {color: white; font-size: 18px;}
-link {color: white;}
-.assignments:link {background-color: rgba(240, 128, 128, 0.692); text-align: center; display: inline-block; ;}
+body {
+    background-color: lightcoral;
+}
+h1 {
+    color:white; 
+    font-size: 60px; 
+    text-align: center; 
+    text-shadow:2px 2px lightgrey; 
+}
+h2 {
+    color: white; 
+    font-size: 18px;
+}
+a:link, a:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+a:hover, a:active {
+    background-color: green;
+    color: white;
+  }
