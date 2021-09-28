@@ -23,4 +23,4 @@ div.classmenu {background-color: #333; text-align: center;}
 div.classmenu a {display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none;}
 div.classmenu a:hover {background-color: #777;}
 
-body {background-image: url("pic.jpg"); opacity: 0.5; align-items: center;}
+body {background-image: url("pic.jpg"); opacity: 0.5;}
