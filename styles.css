@@ -11,17 +11,17 @@ h2 {
     color: white; 
     font-size: 18px;
 }
-a:link, a:visited {
-    background-color: white;
+.button:link, .button:visited {
+    background-color: lightcoral;
     color: black;
-    border: 2px solid green;
+    border: 2px solid darkred;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
   }
   
-a:hover, a:active {
-    background-color: green;
+.button:hover, .button:active {
+    background-color: darkred;
     color: white;
   }
