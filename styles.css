@@ -26,4 +26,4 @@ div.classmenu {background-color: darkslateblue; text-align: center;}
 div.classmenu a {display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none;}
 div.classmenu a:hover {background-color: #444;}
 
-div.homebox {outline-style: solid; outline-color: darkslateblue; outline-width: 5px;}
+div.homebox {border-style: dashed; border-color: darkslateblue; border-width: 2px; border-radius: 5px;}
