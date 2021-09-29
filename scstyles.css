@@ -1,6 +1,6 @@
 h1 {color:white; font-size: 60px; text-align: center; text-shadow:2px 2px lightgrey;}
 
-body {background-image: url("scimg.jpeg");}
+body {background-image: url("scimg.jpeg"); background-position: center;}
 
 div.navbar {background-color: darkslateblue; font-size: 28px; text-align: center; margin: auto; width: 100%; opacity: 0.9;}
 div.navbar a {display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none;}
@@ -12,4 +12,4 @@ div.navbarhome a:hover {background-color: #444;}
 
 audio {display: none;}
 
-div.paragraph {background-color: white; opacity: 0.7; width: 100%;}
+div.paragraph {background-color: white; opacity: 0.9; width: 100%;}
