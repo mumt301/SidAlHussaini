@@ -14,7 +14,7 @@ h2 {
 
 img {border-radius: 8px; height: 150px; width: 100px;}
 
-div.assignments {background-color: darkslateblue; font-size: 28px; text-align: center; margin: auto; width: 30%;}
+div.assignments {background-color: darkslateblue; font-size: 28px; text-align: center; margin: auto; width: 100%;}
 div.assignments a {display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none;}
 div.assignments a:hover {background-color: #444;}
 
@@ -25,3 +25,5 @@ div.apage a:hover {background-color: #444;}
 div.classmenu {background-color: darkslateblue; text-align: center;}
 div.classmenu a {display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none;}
 div.classmenu a:hover {background-color: #444;}
+
+div.homebox {outline-style: solid; outline-color: darkslateblue; outline-width: 5px;}
