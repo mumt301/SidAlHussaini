@@ -9,3 +9,5 @@ div.navbar a:hover {background-color: #444;}
 div.navbarhome {background-color: darkslateblue; font-size: 14px; text-align: center; margin: auto; width: 100%; opacity: 0.9;}
 div.navbarhome a {display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none;}
 div.navbarhome a:hover {background-color: #444;}
+
+audio {display: none;}
