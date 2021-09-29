@@ -11,3 +11,5 @@ div.navbarhome a {display: inline-block; color: white; text-align: center; paddi
 div.navbarhome a:hover {background-color: #444;}
 
 audio {display: none;}
+
+div.paragraph {background-color: white; opacity: 0.7;}
