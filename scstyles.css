@@ -2,6 +2,10 @@ h1 {color:white; font-size: 60px; text-align: center; text-shadow:2px 2px lightg
 
 body {background-image: url("scimg.jpeg");}
 
-div.navbar {background-color: darkslateblue; font-size: 28px; text-align: center; margin: auto; width: 100%;}
+div.navbar {background-color: darkslateblue; font-size: 28px; text-align: center; margin: auto; width: 100%; opacity: 0.5;}
 div.navbar a {display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none;}
 div.navbar a:hover {background-color: #444;}
+
+div.navbarhome {background-color: darkslateblue; font-size: 14px; text-align: center; margin: auto; width: 100%; opacity: 0.5;}
+div.navbarhome a {display: inline-block; color: white; text-align: center; padding: 14px; text-decoration: none;}
+div.navbarhome a:hover {background-color: #444;}
