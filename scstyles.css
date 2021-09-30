@@ -14,7 +14,7 @@ div.navbarhome a:hover {background-color: #444;}
 
 audio {display: none;}
 
-div.paragraph {background-color: white; opacity: 0.97; width: 100%; text-align: center}
+div.paragraph {background-color: white; opacity: 0.97; width: 100%; text-align: center; margin: auto;}
 
 div.albums {
     margin: 5px;
