@@ -19,7 +19,7 @@ div.paragraph {background-color: white; opacity: 0.97; width: 100%; text-align: 
 div.albums {
     margin: 5px;
     border: 0%;
-    float: left;
+    float: none;
     width: 180px;
   }
   
