@@ -24,16 +24,16 @@ function httpGet(theURL, cbFunction) {
     xmlHttp.send();
     xmlHttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            cbFunction(this);
+        cbFunction(this);
         }
-    }
+    };
 }
 function getMBID(xhttp) {
     let retrievedData = xhttp.responseXML; 
     console.log(retrievedData);
     let artistData = retrievedData.getElementsByTagName("artist")[0]; 
     console.log(artistData);
-    let artistName = artistData.getElementsByTagName("artist")[0].innerHTML; 
+    let artistName = artistData.getElementsByTagName('name')[0].innerHTML; 
     console.log(artistName);
     let artistMBID = artistData.id; 
     console.log(artistMBID);
