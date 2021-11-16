@@ -48,7 +48,7 @@ function getAlbum(xhttp) {
     console.log(releaselist);
     let releaseGroups = releaselist.getElementsByTagName("release-group");
     let releaseCount = releaseGroups.length;
-    document.getElementById("albums").innerHTML = "There's" + releaseCount + "albums released."; 
+    document.getElementById("albums").innerHTML = "There are" + releaseCount + "albums released."; 
     console.log(releaseCount);
     var AlbumNames = []; 
     var AlbumDates = [];
