@@ -24,7 +24,7 @@ function httpGet(theURL, cbFunction) {
     xmlHttp.send();
     xmlHttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-        cbFunction(this);
+            cbFunction(this);
         }
     };
 }
@@ -65,8 +65,8 @@ function getAlbum(xhttp) {
     console.log(AlbumNames); console.log(AlbumDates);
     text = "<tr><th>Album Name</th><th>Release Date</th></tr>";
     for (i = 0; i < AlbumNames.length; i++) {
-        text += "<tr><td> " + AlbumNames[i] + "</td";
-        text += "td> " + AlbumDates [i] + "</td></tr>";
+        text += "<tr><td> " + AlbumNames[i] + "</td>";
+        text += "<td> " + AlbumDates [i] + "</td></tr>";
     }
     let placeholder = document.getElementById('placeholder'); 
     placeholder.innerHTML = text;
