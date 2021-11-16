@@ -12,3 +12,33 @@ function queryArtist () {
         httpGet(queryURL, getMBID);
     }
 }
+function queryAlbums(ambid) {
+    let mbBaseURL = "https://musicbrainz.org/ws/2/";
+    let mbBrowse = "release-group?artist=";
+    let limit = "&limit=200";
+    let Browse = mbBaseURL + mbBrowse + ambid + limit;
+    httpGet(Browse, getAlbum);
+}
+
+function httpGet(theURL, cbFunction) {
+    let xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", theURL);
+    xmlHttp.send();
+    xmlHttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            cbFunction(this);
+        }
+    }
+}
+function getMBID(xhttp) {
+    let retrievedData = xhttp.responseXML;
+    console.log(retrievedData);
+    let artistData = retrievedData.getElementsByTagName("artist")[0];
+    console.log(artistData);
+    let artistName = artistData.getElementsByTagName("artist")[0].innerHTML;
+    console.log(artistName);
+    let artistMBID = artistData.id;
+    console.log(artistMBID);
+
+    queryAlbums(artistMBID);
+}
