@@ -1,5 +1,5 @@
 function queryArtist () {
-    let params = (new.URL(document.location)).searchParams;
+    let params = (new URL(document.location)).searchParams;
     if (params.has('artist')){
         let artistName = params.get('artist'); 
         console.log(artistName);
