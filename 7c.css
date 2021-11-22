@@ -1,5 +1,6 @@
 #thereminZone {
+    background: rgb(190, 111, 111);
     height: 400px;
     width: 100%;
-    border-style: solid;
+    border-style: none;
 }
