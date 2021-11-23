@@ -24,8 +24,8 @@ function thereminControl(e, oscillator, theremin) {
     frequencyparagraph.innerHTML = noteFromFrequency(thereminFreq);
 
     let freqpararaph = document.getElementById("frequency")
-    console.log ("frequency: ", interval(thereminFreq));
-    freqpararaph.innerHTML = interval(thereminFreq);
+    console.log ("frequency: ", thereminFreq(thereminFreq));
+    freqpararaph.innerHTML = thereminFreq(thereminFreq);
 }
 
 function thereminOff(oscillator) {
