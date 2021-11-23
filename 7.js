@@ -52,13 +52,11 @@ if (urlParameters.has('maxfreq')) {
 
 
 
-
-
 function runAfterLoadingPage() {
     const oscillator = new Pizzicato.Sound({
         source: 'wave',
         options: {
-            type: "Sine",
+            type: getElementById("oscillatorType"),
             frequency: 220
         }
     });
