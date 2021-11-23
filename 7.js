@@ -20,6 +20,10 @@ function thereminControl(e, oscillator, theremin) {
     oscillator2.frequency = thereminFreq * 2;
     console.log("Volume: ", thereminVolume);
     oscillator.volume = thereminVolume;
+    
+    let frequencyparagraph = document.getElementById("frequency")
+    console.log ("NoteName: ", noteFromFrequency(thereminFreq));
+    frequencyparagraph.innerHTML = noteFromFrequency(thereminFreq);
 }
 
 function thereminOff(oscillator) {
@@ -98,9 +102,5 @@ function noteFromFrequency(frequency, withOctave=false) {
     }
     return notename;
 }
-
-let placeholder = document.getElementById('placeholder');
-placeholder.innerHTML = noteFromFrequency;
-
 
 window.onload = runAfterLoadingPage;
