@@ -20,10 +20,14 @@ function thereminControl(e, oscillator, theremin) {
     oscillator2.frequency = thereminFreq * 2;
     console.log("Volume: ", thereminVolume);
     oscillator.volume = thereminVolume;
-    
-    let frequencyparagraph = document.getElementById("frequency")
+
+    let frequencyparagraph = document.getElementById("notename")
     console.log ("NoteName: ", noteFromFrequency(thereminFreq));
     frequencyparagraph.innerHTML = noteFromFrequency(thereminFreq);
+
+    let freqpararaph = document.getElementById("frequency")
+    console.log ("frequency: ", interval(thereminFreq));
+    freqpararaph.innerHTML = interval(thereminFreq);
 }
 
 function thereminOff(oscillator) {
@@ -39,21 +43,13 @@ function runAfterLoadingPage() {
         }
     });
 
-    const oscillator2 = new Pizzicato.Sound({
-        source: 'wave',
-        options: {
-            type: "sine",
-            frequency: 220
-        }
-    });
-
     const theremin = document.getElementById("thereminZone");
 
     theremin.addEventListener("mouseenter", function (e) {
         thereminOn(oscillator, oscillator2);
     });
     theremin.addEventListener("mousemove", function (e) {
-        thereminControl(e, oscillator, oscillator2, theremin);
+        thereminControl(e, oscillator, theremin);
     });
     theremin.addEventListener("mouseleave", function () {
         thereminOff(oscillator, oscillator2);
