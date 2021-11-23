@@ -1,46 +1,54 @@
-function thereminOn(oscillator) {
+function thereminOn(oscillator, oscillator2) {
     oscillator.play();
+    oscillator2.play();
 }
 
-function thereminControl(e, oscillator, theremin) {
+function thereminControl(e, oscillator, oscillator2, theremin, urlParams) {
     let x = e.offsetX;
     let y = e.offsetY;
     console.log(x, y);
 
     let minFrequency = 220.0;
     let maxFrequency = 880.0;
+
+    let notename = document.getElementById('notename')
+    let frequency = document.getElementById('frequency')
+    let notename2 = document.getElementById('notename2')
+    let frequency2 = document.getElementById('frequency2')
+
     let freqRange = maxFrequency - minFrequency;
     let thereminFreq = minFrequency + (x / theremin.clientWidth) * freqRange;
     let thereminVolume = 1.0 - (y / theremin.clientHeight);
 
     console.log("Frequency: ", thereminFreq);
     oscillator.frequency = thereminFreq;
+    notename.innerHTML = noteFromFrequency(thereminFreq);
+    frequency.innerHTML = thereminFreq;
+
+    console.log("Frequency2: ", oscillator2.frequency);
+
     console.log("Volume: ", thereminVolume);
     oscillator.volume = thereminVolume;
-
-
-    let frequencyparagraph = document.getElementById("notename")
-    console.log ("notename: ", noteFromFrequency(thereminFreq));
-    frequencyparagraph.innerHTML = noteFromFrequency(thereminFreq);
-
-    let freqpararaph = document.getElementById("frequency")
-    console.log ("frequency: ", thereminFreq(thereminFreq));
-    freqpararaph.innerHTML = thereminFreq(thereminFreq);
+    oscillator2.volume = thereminVolume;
 }
 
 function thereminOff(oscillator) {
     oscillator.stop();
+    oscillator2.stop();
 }
 
 
 
 
 let urlParameters = (new URL(document.location)).searchParams;
-if (urlParameters.has('oscillator')) {
-    let oscillatorType = urlParameters.get('oscillator');
+if (urlParameters.has('osctype')) {
+    let oscillatorType = urlParameters.get('osctype');
 }
-if (urlParameters.has('interval')) {
-    let semitones = parseInt(urlParameters.get('interval'));
+if (urlParameters.has('semitones')) {
+    let semitones = parseInt(urlParameters.get('semitones'));
+    oscillator2.frequency = interval(thereminFreq, semitones);
+    notename2.innerHTML = noteFromFrequency(oscillator2.frequency);
+    frequency2.innerHTML = oscillator2.frequency;
 }
 if (urlParameters.has('minfreq')) {
     let minfreq = parseInt(urlParameters.get('minfreq'));
@@ -53,24 +61,33 @@ if (urlParameters.has('maxfreq')) {
 
 
 function runAfterLoadingPage() {
+    let oscillatorType = "sine";
+
     const oscillator = new Pizzicato.Sound({
         source: 'wave',
         options: {
-            type: document.getElementById("oscillatorType"),
+            type: oscillatorType,
             frequency: 220
         }
     });
+    const oscillator2 = new Pizzacato.Sound({
+        source: 'wave',
+        options: {
+            type: oscillatorType,
+            frequency: 220
+        }
+    })
 
     const theremin = document.getElementById("thereminZone");
 
     theremin.addEventListener("mouseenter", function (e) {
-        thereminOn(oscillator);
+        thereminOn(oscillator, oscillator2);
     });
     theremin.addEventListener("mousemove", function (e) {
-        thereminControl(e, oscillator, theremin);
+        thereminControl(e, oscillator, oscillator2, theremin, urlParams);
     });
     theremin.addEventListener("mouseleave", function () {
-        thereminOff(oscillator);
+        thereminOff(oscillator, oscillator2);
     });
 }
 
