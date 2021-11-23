@@ -35,19 +35,30 @@ function thereminOff(oscillator) {
 
 
 
-function validateForm() {
-    let x = document.forms["Oscillator Type"].value;
-    if (x == "") {
-        alert("Oscillator type must be chosen");
-        return false;
-    }
+let urlParameters = (new URL(document.location)).searchParams;
+if (urlParameters.has('oscillator')) {
+    let oscillatorType = urlParameters.get('oscillator');
 }
+if (urlParameters.has('interval')) {
+    let semitones = parseInt(urlParameters.get('interval'));
+}
+if (urlParameters.has('minfreq')) {
+    let minfreq = parseInt(urlParameters.get('minfreq'));
+}
+if (urlParameters.has('maxfreq')) {
+    let maxfreq = parseInt(urlParameters.get('maxfreq'));
+}
+
+
+
+
+
 
 function runAfterLoadingPage() {
     const oscillator = new Pizzicato.Sound({
         source: 'wave',
         options: {
-            type: document.forms["Oscillator Type"].value,
+            type: "Sine",
             frequency: 220
         }
     });
