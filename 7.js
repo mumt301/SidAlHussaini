@@ -56,7 +56,7 @@ function runAfterLoadingPage() {
     const oscillator = new Pizzicato.Sound({
         source: 'wave',
         options: {
-            type: getElementById("oscillatorType"),
+            type: document.getElementById("oscillatorType"),
             frequency: 220
         }
     });
