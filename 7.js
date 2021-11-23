@@ -9,7 +9,7 @@ function thereminControl(e, oscillator, theremin) {
     let y = e.offsetY;
     console.log(x, y);
 
-    let minFrequency = 220.0;
+    let minFrequency = 110.0;
     let maxFrequency = 880.0;
     let freqRange = maxFrequency - minFrequency;
     let thereminFreq = minFrequency + (x / theremin.clientWidth) * freqRange;
@@ -30,7 +30,7 @@ function runAfterLoadingPage() {
         source: 'wave',
         options: {
             type: "sine",
-            frequency: 220
+            frequency: 110
         }
     });
 
@@ -46,5 +46,50 @@ function runAfterLoadingPage() {
         thereminOff(oscillator);
     });
 }
+
+
+
+function interval(frequency, semitones) {
+    return frequency * Math.pow(2, semitones / 12);
+}
+
+function midiToFrequency(midinumber, concertA = 440) {
+    const A4 = 69
+    if (midinumber === A4) {
+        return concertA;
+    }
+    let semitones = midinumber - A4;
+    return interval(440, semitones);
+}
+
+function midiFromFrequency(frequency) {
+    let minDiff = Number.MAX_VALUE;
+    let midinumber = -1;
+    for (let midi = 0; midi < 128; midi++) {
+        let midiFreq = midiToFrequency(midi);
+        let freqDiff = Math.abs(midiFreq - frequency);
+        if (freqDiff < minDiff) {
+            minDiff = freqDiff;
+            midinumber = midi;
+        }
+    }
+    return midinumber
+}
+
+function noteFromFrequency(frequency, withOctave=false) {
+    const midinumber = midiFromFrequency(frequency);
+    const pitchclass = midinumber % 12;
+    let octave = (midinumber - pitchclass) / 12;
+    let notename = notenames[pitchclass];
+    if (withOctave) {
+        octave--;
+        notename += octave;
+    }
+    return notename;
+}
+
+let placeholder = document.getElementById('placeholder');
+placeholder.innerHTML = text;
+
 
 window.onload = runAfterLoadingPage;
