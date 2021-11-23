@@ -1,5 +1,3 @@
-"use strict";
-
 function thereminOn(oscillator) {
     oscillator.play();
 }
@@ -9,7 +7,7 @@ function thereminControl(e, oscillator, theremin) {
     let y = e.offsetY;
     console.log(x, y);
 
-    let minFrequency = 110.0;
+    let minFrequency = 220.0;
     let maxFrequency = 880.0;
     let freqRange = maxFrequency - minFrequency;
     let thereminFreq = minFrequency + (x / theremin.clientWidth) * freqRange;
@@ -17,12 +15,12 @@ function thereminControl(e, oscillator, theremin) {
 
     console.log("Frequency: ", thereminFreq);
     oscillator.frequency = thereminFreq;
-    oscillator2.frequency = thereminFreq * 2;
     console.log("Volume: ", thereminVolume);
     oscillator.volume = thereminVolume;
 
+
     let frequencyparagraph = document.getElementById("notename")
-    console.log ("NoteName: ", noteFromFrequency(thereminFreq));
+    console.log ("notename: ", noteFromFrequency(thereminFreq));
     frequencyparagraph.innerHTML = noteFromFrequency(thereminFreq);
 
     let freqpararaph = document.getElementById("frequency")
@@ -34,31 +32,48 @@ function thereminOff(oscillator) {
     oscillator.stop();
 }
 
+
+
+
 function runAfterLoadingPage() {
     const oscillator = new Pizzicato.Sound({
         source: 'wave',
         options: {
             type: "sine",
-            frequency: 110
+            frequency: 220
         }
     });
 
     const theremin = document.getElementById("thereminZone");
 
     theremin.addEventListener("mouseenter", function (e) {
-        thereminOn(oscillator, oscillator2);
+        thereminOn(oscillator);
     });
     theremin.addEventListener("mousemove", function (e) {
         thereminControl(e, oscillator, theremin);
     });
     theremin.addEventListener("mouseleave", function () {
-        thereminOff(oscillator, oscillator2);
+        thereminOff(oscillator);
     });
 }
 
 
 
 
+let notenames = {
+    0: "C",
+    1: "C#",
+    2: "D",
+    3: "Eb",
+    4: "E",
+    5: "F",
+    6: "F#",
+    7: "G",
+    8: "Ab",
+    9: "A",
+    10: "Bb",
+    11: "B"
+}
 
 function interval(frequency, semitones) {
     return frequency * Math.pow(2, semitones / 12);
