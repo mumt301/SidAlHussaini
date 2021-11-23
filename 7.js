@@ -35,7 +35,13 @@ function thereminOff(oscillator) {
 
 
 
-
+function validateForm() {
+    let x = document.forms["Oscillator Type"].value;
+    if (x == "") {
+        alert("Oscillator type must be chosen");
+        return false;
+    }
+}
 
 function runAfterLoadingPage() {
     const oscillator = new Pizzicato.Sound({
