@@ -35,11 +35,13 @@ function thereminOff(oscillator) {
 
 
 
+
+
 function runAfterLoadingPage() {
     const oscillator = new Pizzicato.Sound({
         source: 'wave',
         options: {
-            type: "sine",
+            type: document.getElementById("Oscillator Type"),
             frequency: 220
         }
     });
