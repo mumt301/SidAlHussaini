@@ -89,7 +89,7 @@ function noteFromFrequency(frequency, withOctave=false) {
 }
 
 let placeholder = document.getElementById('placeholder');
-placeholder.innerHTML = text;
+placeholder.innerHTML = notename;
 
 
 window.onload = runAfterLoadingPage;
