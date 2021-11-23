@@ -17,6 +17,7 @@ function thereminControl(e, oscillator, theremin) {
 
     console.log("Frequency: ", thereminFreq);
     oscillator.frequency = thereminFreq;
+    oscillator2.frequency = thereminFreq * 2;
     console.log("Volume: ", thereminVolume);
     oscillator.volume = thereminVolume;
 }
@@ -34,18 +35,28 @@ function runAfterLoadingPage() {
         }
     });
 
+    const oscillator2 = new Pizzicato.Sound({
+        source: 'wave',
+        options: {
+            type: "sine",
+            frequency: 220
+        }
+    });
+
     const theremin = document.getElementById("thereminZone");
 
     theremin.addEventListener("mouseenter", function (e) {
-        thereminOn(oscillator);
+        thereminOn(oscillator, oscillator2);
     });
     theremin.addEventListener("mousemove", function (e) {
-        thereminControl(e, oscillator, theremin);
+        thereminControl(e, oscillator, oscillator2, theremin);
     });
     theremin.addEventListener("mouseleave", function () {
-        thereminOff(oscillator);
+        thereminOff(oscillator, oscillator2);
     });
 }
+
+
 
 
 
@@ -89,7 +100,7 @@ function noteFromFrequency(frequency, withOctave=false) {
 }
 
 let placeholder = document.getElementById('placeholder');
-placeholder.innerHTML = notename;
+placeholder.innerHTML = noteFromFrequency;
 
 
 window.onload = runAfterLoadingPage;
