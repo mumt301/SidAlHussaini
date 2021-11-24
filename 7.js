@@ -3,7 +3,7 @@ function thereminOn(oscillator, oscillator2) {
     oscillator2.play();
 }
 
-function thereminControl(e, oscillator, oscillator2, theremin, urlParams) {
+function thereminControl(e, oscillator, oscillator2, theremin, urlParameters) {
     let x = e.offsetX;
     let y = e.offsetY;
     console.log(x, y);
@@ -25,6 +25,15 @@ function thereminControl(e, oscillator, oscillator2, theremin, urlParams) {
     notename.innerHTML = noteFromFrequency(thereminFreq);
     frequency.innerHTML = thereminFreq;
 
+    if (urlParameters.has('semitones')) {
+        let semitones = parseInt(urlParameters.get('semitones'));
+        oscillator2.frequency = interval(thereminFreq, semitones);
+        notename2.innerHTML = noteFromFrequency(oscillator2.frequency);
+        frequency2.innerHTML = oscillator2.frequency;
+    } else {
+        oscillator2.frequency = 0;
+    }
+
     console.log("Frequency2: ", oscillator2.frequency);
 
     console.log("Volume: ", thereminVolume);
@@ -32,36 +41,25 @@ function thereminControl(e, oscillator, oscillator2, theremin, urlParams) {
     oscillator2.volume = thereminVolume;
 }
 
-function thereminOff(oscillator) {
+function thereminOff(oscillator, oscillator2) {
     oscillator.stop();
     oscillator2.stop();
 }
 
 
-
-
-let urlParameters = (new URL(document.location)).searchParams;
-if (urlParameters.has('osctype')) {
-    let oscillatorType = urlParameters.get('osctype');
-}
-if (urlParameters.has('semitones')) {
-    let semitones = parseInt(urlParameters.get('semitones'));
-    oscillator2.frequency = interval(thereminFreq, semitones);
-    notename2.innerHTML = noteFromFrequency(oscillator2.frequency);
-    frequency2.innerHTML = oscillator2.frequency;
-}
-if (urlParameters.has('minfreq')) {
-    let minfreq = parseInt(urlParameters.get('minfreq'));
-}
-if (urlParameters.has('maxfreq')) {
-    let maxfreq = parseInt(urlParameters.get('maxfreq'));
-}
-
-
-
-
 function runAfterLoadingPage() {
     let oscillatorType = "sine";
+
+    let urlParameters = (new URL(document.location)).searchParams;
+    if (urlParameters.has('osctype')) {
+    oscillatorType = urlParameters.get('osctype');
+}
+    if (urlParameters.has('minfreq')) {
+    let minfreq = parseInt(urlParameters.get('minfreq'));
+}
+    if (urlParameters.has('maxfreq')) {
+    let maxfreq = parseInt(urlParameters.get('maxfreq'));
+}
 
     const oscillator = new Pizzicato.Sound({
         source: 'wave',
@@ -76,7 +74,7 @@ function runAfterLoadingPage() {
             type: oscillatorType,
             frequency: 220
         }
-    })
+    });
 
     const theremin = document.getElementById("thereminZone");
 
@@ -84,7 +82,7 @@ function runAfterLoadingPage() {
         thereminOn(oscillator, oscillator2);
     });
     theremin.addEventListener("mousemove", function (e) {
-        thereminControl(e, oscillator, oscillator2, theremin, urlParams);
+        thereminControl(e, oscillator, oscillator2, theremin, urlParameters);
     });
     theremin.addEventListener("mouseleave", function () {
         thereminOff(oscillator, oscillator2);
