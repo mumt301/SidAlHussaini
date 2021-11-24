@@ -55,10 +55,10 @@ function runAfterLoadingPage() {
     oscillatorType = urlParameters.get('osctype');
 }
     if (urlParameters.has('minfreq')) {
-    let minfreq = parseInt(urlParameters.get('minfreq'));
+    minfreq = parseInt(urlParameters.get('minfreq'));
 }
     if (urlParameters.has('maxfreq')) {
-    let maxfreq = parseInt(urlParameters.get('maxfreq'));
+    maxfreq = parseInt(urlParameters.get('maxfreq'));
 }
 
     const oscillator = new Pizzicato.Sound({
