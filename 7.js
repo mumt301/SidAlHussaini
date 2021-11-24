@@ -68,7 +68,7 @@ function runAfterLoadingPage() {
             frequency: 220
         }
     });
-    const oscillator2 = new Pizzacato.Sound({
+    const oscillator2 = new Pizzicato.Sound({
         source: 'wave',
         options: {
             type: oscillatorType,
